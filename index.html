@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Eliana Moura</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="./logic.js" defer=""></script>
+</head>
+<body>
+	<nav>
+		<div class="hamburger">
+			<span class="hamburger_stick stick1"></span>
+			<span class="hamburger_stick stick2"></span>
+			<span class="hamburger_stick stick3"></span>
+		</div>
+		<ul class="nav_list_container">
+			<a class="nav_list_link link1" href="#contact">Contacto</a>
+			<a class="nav_list_link link2" href="#services">Servicios</a>
+		</ul>
+	</nav>
+
+	<header>
+		<div class="header_text_container">
+			<h2 class="header_tittle">Eliana Moura</h2>
+			<h1 class="header_sub-tittle">Enfermera Profesional Matriculada</h1>
+			<p class="header_desc desc1">Más de 10 años apoyando y sanando pacientes en la Ciudad de Santa Fe.</p>
+			<p class="header_desc desc2">Y hoy, ¿cómo te sentís? ¿En qué te puedo ayudar?</p>
+			<a class="more" href="#services">Leer más</a>
+		</div>
+		<div class="header_background">
+			<img src="./images/back1.png" alt="">
+		</div>
+	</header>
+
+	<div id="services">
+		<div class="services_container">
+			<div class="services_box">
+				<i class="fas fa-heartbeat"></i>
+				<p>CONTROL DE<br>PRESIÓN</p>
+			</div>
+			<div class="services_box">
+				<i class="fas fa-candy-cane"></i>
+				<p>CONTROL DE<br>AZÚCAR EN<br>SANGRE</p>
+			</div>
+			<div class="services_box">
+				<img src="./images/veins2.png" alt="">
+				<p>MEDICACIÓN VIA INTRAVENOSA</p>
+			</div>
+			<div class="services_box">
+				<i class="fas fa-syringe"></i>
+				<p>COLOCACIÓN DE INYECTABLES Y/O VACUNAS</p>
+			</div>
+			<div class="services_box">
+				<i class="fas fa-medkit"></i>
+				<p>CURACIONES SIMPLES Y/O EXTRACCIÓN DE PUNTOS</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="contact">
+		<h3>CONTACTO</h3>
+		<div class="contact_boxes_container">
+			<div class="contact_box box1">
+				<i class="fab fa-whatsapp cicon1"></i>
+				<p class="contact_box_desc cdesc1">Para <span>turnos o consultas</span> enviar un mensaje por WhatsApp.</p>
+				<a class="contact_box_action action1" href="https://wa.me/+5493425921124" target="_blank">Enviar mensaje</a>
+			</div>
+			<div class="contact_box box2">
+				<i class="fas fa-mobile-alt cicon2"></i>
+				<p class="contact_box_desc cdesc2">Para <span>emergencias</span> llamar al siguiente número. <br> +54 9 3425  92-1124</p>
+				<a class="contact_box_action action2" href="tel:+5493425921124">Llamar</a>
+			</div>
+		</div>
+		<div class="contact_background">
+			<img src="./images/nurses.png" alt="">
+		</div>
+	</div>
+
+	<footer>
+		<div class="footer_items_container">
+			<div class="footer_social_container">
+				<a href="https://www.facebook.com/eliana.moura.5249" target="_blank">
+					<i class="fab fa-facebook-square"></i>
+				</a>
+				<a href="https://www.instagram.com/" target="_blank">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="https://twitter.com/" target="_blank">
+					<i class="fab fa-twitter-square"></i>
+				</a>
+			</div>
+			<div class="footer_background">
+				<img src="./images/back1.png" alt="">
+			</div>
+			<p class="copyright">© <span id="year"></span> Eliana Moura</p>
+			<p class="rights">Todos los derechos reservados.</p>
+		</div>
+	</footer>
+
+</body>
+</html>
