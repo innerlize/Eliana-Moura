@@ -10,7 +10,7 @@ I used some simple tools, such as:
 
 <table align='center'>
   <thead>
-    <th>Technology</th>
+    <th>Technology/Software</th>
     <th>Framework/Library</th>
   </thead>
   
@@ -26,6 +26,18 @@ I used some simple tools, such as:
     <tr align='center'>
       <td>JavaScript</td>
       <td>jQuery</td>
+    </tr>
+    <tr align='center'>
+      <td>Figma</td>
+      <td> - </td>
+    </tr>
+    <tr align='center'>
+      <td>Photoshop</td>
+      <td> - </td>
+    </tr>
+    <tr align='center'>
+      <td>Illustrator</td>
+      <td> - </td>
     </tr>
   </tbody>
 </table>
