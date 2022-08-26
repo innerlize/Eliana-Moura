@@ -5,6 +5,7 @@
 	<title>Eliana Moura</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,31 +35,41 @@
 			<a class="more" href="#services">Leer más</a>
 		</div>
 		<div class="header_background">
-			<img src="./images/back1.png" alt="">
+			<img src="./images/back1.png" alt="" draggable='false'>
 		</div>
 	</header>
 
 	<div id="services">
 		<div class="services_container">
-			<div class="services_box">
-				<i class="fas fa-heartbeat"></i>
-				<p>CONTROL DE<br>PRESIÓN</p>
+			<div class="box1">
+				<div class="services_box" data-aos='slide-right'>
+					<i class="fas fa-heartbeat"></i>
+					<p>CONTROL DE<br>PRESIÓN</p>
+				</div>
 			</div>
-			<div class="services_box">
-				<i class="fas fa-candy-cane"></i>
-				<p>CONTROL DE<br>AZÚCAR EN<br>SANGRE</p>
+			<div class="box2">
+				<div class="services_box" data-aos='slide-left'>
+					<p>CONTROL DE<br>AZÚCAR EN<br>SANGRE</p>
+					<i class="fas fa-candy-cane"></i>
+				</div>
 			</div>
-			<div class="services_box">
-				<img src="./images/veins2.png" alt="">
-				<p>MEDICACIÓN VIA INTRAVENOSA</p>
+			<div class="box3">
+				<div class="services_box" data-aos='slide-right'>
+					<img src="./images/veins2.png" alt="">
+					<p>MEDICACIÓN VIA<br>INTRAVENOSA</p>
+				</div>
 			</div>
-			<div class="services_box">
-				<i class="fas fa-syringe"></i>
-				<p>COLOCACIÓN DE INYECTABLES Y/O VACUNAS</p>
+			<div class="box4">
+				<div class="services_box" data-aos='slide-left'>
+					<p>INYECTABLES<br>Y/O VACUNAS</p>
+					<i class="fas fa-syringe"></i>
+				</div>
 			</div>
-			<div class="services_box">
-				<i class="fas fa-medkit"></i>
-				<p>CURACIONES SIMPLES Y/O EXTRACCIÓN DE PUNTOS</p>
+			<div class="box5">
+				<div class="services_box" data-aos='slide-right'>
+					<i class="fas fa-medkit"></i>
+					<p>CURACIONES<br>SIMPLES</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -66,12 +77,12 @@
 	<div id="contact">
 		<h3>CONTACTO</h3>
 		<div class="contact_boxes_container">
-			<div class="contact_box box1">
+			<div class="contact_box boxPri">
 				<i class="fab fa-whatsapp cicon1"></i>
 				<p class="contact_box_desc cdesc1">Para <span>turnos o consultas</span> enviar un mensaje por WhatsApp.</p>
 				<a class="contact_box_action action1" href="https://wa.me/+5493425921124" target="_blank">Enviar mensaje</a>
 			</div>
-			<div class="contact_box box2">
+			<div class="contact_box boxSec">
 				<i class="fas fa-mobile-alt cicon2"></i>
 				<p class="contact_box_desc cdesc2">Para <span>emergencias</span> llamar al siguiente número. <br> +54 9 3425  92-1124</p>
 				<a class="contact_box_action action2" href="tel:+5493425921124">Llamar</a>
@@ -102,6 +113,36 @@
 			<p class="rights">Todos los derechos reservados.</p>
 		</div>
 	</footer>
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+	<script>
+
+		AOS.init({
+			// Global settings:
+			disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+			startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+			initClassName: 'aos-init', // class applied after initialization
+			animatedClassName: 'aos-animate', // class applied on animation
+			useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+			disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+			debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+			throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+		  
+
+			// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+			offset: 120, // offset (in px) from the original trigger point
+			delay: 0, // values from 0 to 3000, with step 50ms
+			duration: 400, // values from 0 to 3000, with step 50ms
+			easing: 'ease', // default easing for AOS animations
+			once: false, // whether animation should happen only once - while scrolling down
+			mirror: false, // whether elements should animate out while scrolling past them
+			anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+		});
+
+		AOS.init();
+
+	</script>
 
 </body>
 </html>
