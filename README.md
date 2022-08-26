@@ -1,6 +1,8 @@
 ## Introduction
 
-In this project I have been responsible for the development of a personal page for the registered professional nurse Eliana Moura.
+In this project I have been responsible for the development of a <br> personal page for the registered professional nurse Eliana Moura.
+
+<br>
 
 ## "How did you make this project?"
 
@@ -27,6 +29,8 @@ I used some simple tools, such as:
     </tr>
   </tbody>
 </table>
+
+<br>
 
 ## "Do you have a link to watch it?"
 
