@@ -287,7 +287,7 @@ header {
 			&:after {
 				content: '';
 				position: absolute;
-				width: .4vw;
+				width: 3px;
 				height: 100%;
 				background-color: $color4;
 				top: 0;
@@ -301,7 +301,7 @@ header {
 			&:after {
 				content: '';
 				position: absolute;
-				width: .4vw;
+				width: 3px;
 				height: 100%;
 				background-color: $color4;
 				top: 0;
@@ -339,12 +339,11 @@ header {
 		.contact_box {
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			justify-content: center;
 			align-items: center;
 			border-top: 3px solid $color4;
 			width: 160px;
 			height: 200px;
-			padding: 2.3vw 0;
 			color: $color4;
 			background-color: rgba(183, 213, 227, .7);
 
@@ -353,13 +352,9 @@ header {
 				color: #color4;
 			}
 
-			.cicon2 {
-				font-size: 47px;
-			}
-
 			p {
 				font-size: 13px;
-				width: 90%;
+				width: 95%;
 				margin: 20px auto;
 
 				span {
@@ -368,7 +363,6 @@ header {
 
 				.number {
 					display: block;
-					margin-top: .5vw;
 				}
 			}
 
@@ -381,12 +375,6 @@ header {
 				background-color: $color2;
 				border-radius: 3px;
 				justify-self: flex-end;
-			}
-		}
-
-		.boxPri {
-			i {
-				margin-top: -.53vw;
 			}
 		}
 	}
@@ -413,6 +401,8 @@ footer {
 		align-items: center;
 
 		.footer_social_container {
+			margin-bottom: .6em;
+
 			a {
 				i {
 					font-size: 25px;
@@ -569,6 +559,15 @@ footer {
 
 	#services {
 		padding: 30px 80px;
+
+		.services_container {
+			.box1, .box2,
+			.box3, .box4, .box5 {
+				&:after {
+					width: .4vw;
+				}
+			}
+		}
 	}
 }
 
@@ -758,7 +757,7 @@ footer {
 
 				p {
 					font-size: 1.6vw;
-					margin: 30px 0;
+					width: 90%;
 				}
 
 				a {
