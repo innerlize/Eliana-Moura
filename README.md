@@ -21,7 +21,7 @@ I used some simple tools, such as:
     </tr>
     <tr align='center'>
       <td>CSS</td>
-      <td>SASS / SCSS</td>
+      <td>SASS</td>
     </tr>
     <tr align='center'>
       <td>JavaScript</td>
