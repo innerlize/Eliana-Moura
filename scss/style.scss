@@ -4,11 +4,13 @@ $color1: #dcf1fb;
 $color2: #f8b14c;
 $color3: #777887;
 $color4: #384e5e;
+$color5: #885d59;
 $color1Light: rgba(220, 241, 251, .5);
 $color2Light: rgba(248, 177, 76, .5);
 $color3Light: rgba(119, 120, 135, .5);
 $color4Light: rgba(56, 78, 94, .5);
 $typo: 'Ubuntu', sans-serif;
+
 
 * {
 	font-family: $typo;
@@ -23,6 +25,10 @@ html {
 body {
 	height: 100vh;
 	background-color: $color1;
+}
+
+h3 {
+	letter-spacing: 2px;
 }
 
 nav {
@@ -45,7 +51,7 @@ nav {
 			display: inline-block;
 			width: 100%;
 			height: 3px;
-			background-color: #222222;
+			background-color: #333333;
 			transition: all .2s ease-in-out;
 		}
 	}
@@ -224,8 +230,12 @@ header {
 }
 
 #services {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background-color: $color2;
-	padding: 30px 10px;
+	padding: 80px 10px;
 	min-height: 100%;
 
 	.services_container {
@@ -311,6 +321,98 @@ header {
 	}
 }
 
+#gallery {
+	position: relative;
+	text-align: center;
+	background-color: $color4;
+	padding: 50px 0;
+
+	h3 {
+		font-size: 35px;
+		color: $color1;
+		margin-bottom: 30px;
+
+		&:after {
+			content: "";
+			display: block;
+			height: 3px;
+			width: 50px;
+			background-color: $color2;
+			margin: 0 auto;
+			border-radius: 50px;
+		}
+	}
+
+	.row {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		.column {
+			flex: 30%;
+			max-width: 30%;
+			padding: 0 10px;
+
+			img {
+				margin-top: 22px;
+				vertical-align: middle;
+				width: 100%;
+				cursor: pointer;
+				filter: grayscale(100%);
+				transition: all .15s linear;
+				box-shadow: -3.5px 3.5px #333333;
+
+				&:hover {
+					filter: grayscale(0%);
+					transform: scale(1.005);
+					box-shadow: -5px 5px #333333;
+				}
+			}
+		}
+	}
+
+	.fullpage {
+		display: none;
+		position: fixed;
+		z-index: 9999;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		padding: 10vw;
+		background-color: rgba(0, 0, 0, .9);
+
+		img {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		p {
+			position: absolute;
+			left: 50%;
+			bottom: 20px;
+			transform: translateX(-50%);
+			color: $color1;
+			letter-spacing: 2px;
+			z-index: 12000;
+		}
+	}
+
+	.gallery_background {
+		position: absolute;
+		top: calc(0% - 10%);
+		right: 20px;
+		width: 23vw;
+		height: 23vw;
+		background: url(./media/background-images/back-gallery.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		filter: drop-shadow(-5px 5px $color5);
+	}
+}
+
 #contact {
 	width: 100%;
 	padding: 50px 0;
@@ -326,7 +428,7 @@ header {
 			display: block;
 			height: 3px;
 			width: 50px;
-			background-color: rgba(183, 213, 227, .7);
+			background-color: rgba(183, 213, 227, 1);
 			margin: auto;
 			border-radius: 50px;
 		}
@@ -346,6 +448,7 @@ header {
 			height: 200px;
 			color: $color4;
 			background-color: rgba(183, 213, 227, .7);
+			transition: all .15s linear;
 
 			i {
 				font-size: 50px;
@@ -377,10 +480,16 @@ header {
 				background-color: $color2;
 				border-radius: 3px;
 				justify-self: flex-end;
+				transition: all .15s linear;
+
+				&:hover {
+					color: $color1;
+					background-color: $color4;
+				}
 			}
 
-			.onHover {
-				filter: drop-shadow(-.03em .03em $color3);
+			&:hover {
+				filter: drop-shadow(-.4em .4em $color3);
 			}
 		}
 	}
@@ -458,7 +567,7 @@ footer {
 	header {
 		height: 78vh;
 
-		header_text_container {
+		.header_text_container {
 			.header_tittle {
 				font-size: 1.2em;
 				margin-left: -4px;
@@ -472,11 +581,11 @@ footer {
 	}
 }
 
-@media (min-width: 420px) {
+@media (min-width: 400px) {
 	header {
 		.header_background {
 			img {
-				width: 80vw;
+				width: 90vw;
 			}
 		}
 	}
@@ -496,7 +605,46 @@ footer {
 	}
 
 	#services {
-		padding: 30px 40px;
+		padding: 80px 40px;
+	}
+
+	#gallery {
+		padding: 15vw 0 80px 0;
+
+		h3 {
+			font-size: 6.5vw;
+
+			&:after {
+				height: 1vw;
+				width: 8vw;
+			}
+		}
+
+		.row {
+			.column {
+				flex: 30%;
+				max-width: 30%;
+				padding: 0 6px;
+
+				img {
+					margin-top: 12px;
+				}
+			}
+		}
+
+		.fullpage {
+			padding: 13vw;
+
+			p {
+				bottom: 30px;
+			}
+		}
+
+		.gallery_background {
+			right: 5vw;
+			width: 25vw;
+			height: 25vw;
+		}
 	}
 
 	#contact {
@@ -560,7 +708,7 @@ footer {
 	}
 
 	#services {
-		padding: 30px 80px;
+		padding: 80px 80px;
 
 		.services_container {
 			.box1, .box2,
@@ -587,9 +735,11 @@ footer {
 	}
 
 	#services {
-		padding: 30px 110px;
+		padding: 80px 110px;
 
 		.services_container {
+			gap: 10vw;
+
 			div {
 				width: 74%;
 				min-height: 150px;
@@ -611,6 +761,21 @@ footer {
 			}
 		}
 	}
+
+	#gallery {
+		padding: 15vw 0 10vw 0;
+
+		.gallery_background {
+			right: 5vw;
+			width: 22vw;
+			height: 22vw;
+			filter: drop-shadow(-.5vw .5vw $color5);
+		}
+
+		.fullpage {
+			padding: 10vw;
+		}
+	}
 }
 
 @media (min-width: 900px) {
@@ -628,7 +793,6 @@ footer {
 				visibility: visible;
 				opacity: 1;
 				transform: initial;
-				color: $color4;
 			}
 		}
 	}
@@ -649,7 +813,7 @@ footer {
 	}
 
 	#services {
-		padding: 50px 80px;
+		padding: 80px 80px;
 
 		.services_container {
 			gap: 22px;
@@ -677,6 +841,16 @@ footer {
 			}
 		}
 	}
+
+	#gallery {
+		.fullpage {
+			padding: 7vw;
+
+			p {
+				bottom: 25px;
+			}
+		}
+	}
 }
 
 @media (min-width: 1100px) {
@@ -701,7 +875,7 @@ footer {
 	}
 
 	#services {
-		padding: 50px 190px;
+		padding: 80px 190px;
 
 		.services_container {
 			div {
@@ -723,6 +897,30 @@ footer {
 					}
 				}
 			}
+		}
+	}
+
+	#gallery {
+		padding: 80px 140px;
+
+		h3 {
+			font-size: 3.5vw;
+			margin-bottom: 6vw;
+
+			&:after {
+				height: .7vw;
+				width: 5vw;
+			}
+		}
+
+		.fullpage {
+			padding: 6vw;
+		}
+
+		.gallery_background {
+			top: calc(0% - 12%);
+			width: 23vw;
+			height: 23vw;
 		}
 	}
 
@@ -802,7 +1000,7 @@ footer {
 	}
 
 	#services {
-		padding: 50px 220px;
+		padding: 80px 220px;
 
 		.services_container {
 			gap: 32px;
@@ -825,6 +1023,19 @@ footer {
 						font-size: 0.46em;
 					}
 				}
+			}
+		}
+	}
+
+	#gallery {
+		padding: 80px 12vw 130px 12vw;
+
+		.fullpage {
+			padding: 5vw;
+
+			p {
+				font-size: 1.5vw;
+				bottom: 20px;
 			}
 		}
 	}
@@ -910,7 +1121,7 @@ footer {
 	}
 
 	#services {
-		padding: 50px 350px;
+		padding: 80px 350px;
 
 		.services_container {
 			gap: 52px;

@@ -2,17 +2,19 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Eliana Moura</title>
+	<title>Eliana Moura | Enfermera Profesional en Santa Fe Capital</title>
+	<meta name="description" content="Eliana Moura es una enfermera profesional matriculada con más de 10 años apoyando y sanando pacientes en la Ciudad de Santa Fe, Argentina." />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="icon" href="./images/logo.png">
+	<link rel="icon" href="./media/logo.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script type="text/javascript" src="./logic.js" defer=""></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script type="text/javascript" src="./main.js" defer=""></script>
 </head>
 <body>
 	<nav>
@@ -22,8 +24,8 @@
 			<span class="hamburger_stick stick3"></span>
 		</div>
 		<ul class="nav_list_container">
-			<a class="nav_list_link link1" href="#contact">Servicios</a>
-			<a class="nav_list_link link2" href="#services">Galería</a>
+			<a class="nav_list_link link1" href="#services">Servicios</a>
+			<a class="nav_list_link link2" href="#gallery">Galería</a>
 		</ul>
 	</nav>
 
@@ -36,7 +38,7 @@
 			<a class="more" href="#contact">¡Contactame!</a>
 		</div>
 		<div class="header_background">
-			<img src="./images/back.svg" alt="">
+			<img src="./media/background-images/back-header.svg" alt="">
 		</div>
 	</header>
 
@@ -56,7 +58,7 @@
 			</div>
 			<div class="box3">
 				<div class="services_box" data-aos='slide-right'>
-					<img src="./images/vein.svg" alt="">
+					<img src="./media/icons/vein.svg" alt="">
 					<p>MEDICACIÓN VIA<br>INTRAVENOSA</p>
 				</div>
 			</div>
@@ -75,6 +77,30 @@
 		</div>
 	</div>
 
+	<div id="gallery">
+		<div class="gallery_background"></div>
+		<h3>GALERÍA</h3>
+		<div class="row">
+			<div class="column">
+				<img src="./media/gallery-images/1.jpeg">
+				<img src="./media/gallery-images/2.jpeg">
+			</div>
+			<div class="column">
+				<img src="./media/gallery-images/3.jpeg">
+				<img src="./media/gallery-images/4.jpeg">
+			</div>
+			<div class="column">
+				<img src="./media/gallery-images/6.jpeg">
+				<img src="./media/gallery-images/7.jpeg">
+				<img src="./media/gallery-images/5.jpeg">
+			</div>
+		</div>
+		<div class="fullpage">
+			<img class='fullpageImg'>
+			<p>¡Tocá en cualquier lado para cerrar la imagen!</p>
+		</div>
+	</div>
+
 	<div id="contact">
 		<h3>CONTACTO</h3>
 		<div class="contact_boxes_container">
@@ -90,60 +116,30 @@
 			</div>
 		</div>
 		<div class="contact_background">
-			<img src="./images/nurses.png" alt="">
+			<img src="./media/gallery-images/nurses.png" alt="">
 		</div>
 	</div>
 
 	<footer>
 		<div class="footer_items_container">
 			<div class="footer_social_container">
-				<a href="https://www.facebook.com/eliana.moura.5249" target="_blank">
+				<a class="footer_social_link" href="https://www.facebook.com/eliana.moura.5249" target="_blank">
 					<i class="fab fa-facebook-square"></i>
 				</a>
-				<a href="https://www.instagram.com/" target="_blank">
+				<a class="footer_social_link" href="https://www.instagram.com/" target="_blank">
 					<i class="fab fa-instagram"></i>
 				</a>
-				<a href="https://twitter.com/" target="_blank">
+				<a class="footer_social_link" href="https://twitter.com/" target="_blank">
 					<i class="fab fa-twitter-square"></i>
 				</a>
 			</div>
 			<div class="footer_background">
-				<img src="./images/logo.png" alt="">
+				<img src="./media/logo.png" alt="">
 			</div>
 			<p class="copyright">© <span id="year"></span> Eliana Moura</p>
 			<p class="rights">Todos los derechos reservados.</p>
 		</div>
 	</footer>
-
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-	<script>
-
-		AOS.init({
-			// Global settings:
-			disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-			startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-			initClassName: 'aos-init', // class applied after initialization
-			animatedClassName: 'aos-animate', // class applied on animation
-			useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-			disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-			debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-			throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-		  
-
-			// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-			offset: 120, // offset (in px) from the original trigger point
-			delay: 0, // values from 0 to 3000, with step 50ms
-			duration: 400, // values from 0 to 3000, with step 50ms
-			easing: 'ease', // default easing for AOS animations
-			once: false, // whether animation should happen only once - while scrolling down
-			mirror: false, // whether elements should animate out while scrolling past them
-			anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-		});
-
-		AOS.init();
-
-	</script>
 
 </body>
 </html>
