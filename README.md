@@ -1,6 +1,6 @@
 ## Introduction
 
-In this project I have been responsible for the development of a <br> personal page for the registered professional nurse Eliana Moura.a
+In this project I have been responsible for the development of a <br> personal page for the registered professional nurse Eliana Moura.
 
 <br>
 
